@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
-		<title>Amezerrific</title>
+		<title>Amazerrific Sign Up</title>
 	</head>
 
 	<body>
@@ -16,22 +16,26 @@
 		</header>
 
 		<main>
-			<h2>Amazeballs will change your life</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<form action="#" method="post">
+				<label for="username">Username &#40;min 4 characters&#41;:</label>
+				<input type="text" name="username" id="username" minlength="4" required>
 
-			<h3>And here is why you need amazeballs</h3>
-			<ul>
-				<li>It fits your lifestyle</li>
-				<li>It's awesome</li>
-				<li>It rocks your world</li>
-			</ul>
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email" required>
 
-			<img src="humming_bird.jpg" alt="an image of a skeleton riding a hummingbird">
+				<label for="password">Password &#40;min 4 characters&#41;:</label>
+				<input type="password" name="password" id="password" minlength="4" required>
+
+				<label for="reenterpwd">Re-enter password:</label>
+				<input type="password" name="reenterpwd" id="reenterpwd" required>
+
+				<input type="submit" value="Submit">
+			</form>
 		</main>
 
 		<footer>
 			<div class="contact">
-				<h5>Contact Us</h5>
+				<h5>Contact Us!</h5>
 				<p>Amazerrific!</p>
 				<p>555 Fifith St.</p>
 				<p>Asheville, NC 28801</p>
