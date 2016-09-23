@@ -1,52 +1,125 @@
 body {
-  background: #f9e933;
+	background: #f9e933;
+	font-family: 'Tangerine', sans-serif;
+	font-size: 100%;
 }
 
 header, main, footer {
-  min-width: 855px;
+	min-width: 855px;
 }
 
-header .container, main .container, footer .container {
-  max-width: 855px;
-  margin: auto;
+.container {
+	max-width: 855px;
+	margin: auto;
 }
 
 header {
-  background: white;
-  overflow: auto;
+	background: white;
+	overflow: auto;
+	padding: 25px;
+	padding-bottom: 35px;
+	border-bottom: 1px solid lightgrey;
 }
 
-header h1 {
-  float: left;
-  width: 570px;
+h1, h2, h3, h4, h5 {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+	float: left;
+	width: 570px;
+	color: brown;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2.5em;
 }
 
 header nav {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+}
+
+a:visited {
+	color: tomato;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 main {
-  background: white;
-  overflow: auto;
+	background: white;
+	overflow: auto;
+	padding: 20px;
+}
+
+main p {
+	max-width: 400px;
+	padding-bottom: 40px;
+}
+
+.faq li {
+	font-weight: bold;
+}
+
+.faq p {
+	max-width: 500px;
+}
+
+h2 {
+	line-height: 250%;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+h3 {
+	line-height: 225%;
+	font-size: 1.2em;
 }
 
 main .left {
-  float: left;
-  width: 570px;
+	float: left;
+	width: 570px;
 }
 
 main .right {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
 }
 
-footer .left {
-  float: left;
-  width: 570px;
+h5 {
+	font-weight: bold;
+	padding-top: 45px;
+	padding-bottom: 20px;
 }
 
-footer .sitemap {
-  float: right;
-  width: 285px;
+.amazerrific {
+	font-style: italic;
+	color: brown;
+}
+
+.contact {
+	float: left;
+	width: 570px;
+	line-height: 130%;
+}
+
+.sitemap {
+	float: right;
+	width: 285px;
+	color: red;
+	line-height: 130%;
+}
+
+.sitemap .left {
+	float: left;
+}
+
+.sitemap .right {
+	float: right;
 }
