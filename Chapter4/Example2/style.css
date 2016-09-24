@@ -1,14 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    width: 855px;
-    margin: auto;
-    background: ivory;
-    font-size: 100%;
-    font-family: sans-serif;
+  width: 855px;
+  margin: auto;
+  background: ivory;
+  font-size: 100%;
+  font-family: sans-serif;
 }
 
 header {
@@ -41,7 +41,7 @@ main {
 }
 
 .comment-input p {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .comment-input input {
@@ -49,6 +49,7 @@ main {
   height: 30px;
   font-size: 1.2em;
   font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .comment-input button {
@@ -74,15 +75,23 @@ main {
 }
 
 .comments p:nth-child(even) {
-    background: lavender;
+  background: lavender;
 }
 
 .comments p:nth-child(odd) {
-    background: gainsboro;
+  background: gainsboro;
+}
+
+#user1-output {
+  color: black;
+}
+
+#user2-output {
+  color: red;
 }
 
 footer {
-    font-size: smaller;
-    margin-top: 5px;
-    clear: both;
+  font-size: smaller;
+  margin-top: 5px;
+  clear: both;
 }
