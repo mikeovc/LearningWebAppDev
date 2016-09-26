@@ -1,136 +1,125 @@
 body {
-  background: #f9e933;
-  font-family: 'Droid Sans', sans-serif;
+	background: #f9e933;
+	font-family: 'Tangerine', sans-serif;
+	font-size: 100%;
 }
 
 header, main, footer {
-  min-width: 855px;
+	min-width: 855px;
 }
 
-header .container, main .container, footer .container {
-  max-width: 855px;
-  margin: auto;
+.container {
+	max-width: 855px;
+	margin: auto;
 }
 
 header {
-  padding: 25px 0 25px 0;
-  background: white;
-  overflow: auto;
-  border-bottom: 1px solid #ddd;
+	background: white;
+	overflow: auto;
+	padding: 25px;
+	padding-bottom: 35px;
+	border-bottom: 1px solid lightgrey;
 }
 
-/* MAIN LOGO */
+h1, h2, h3, h4, h5 {
+	font-family: 'Ubuntu', sans-serif;
+}
+
 h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-style: italic;
-  font-size: 3em;
-  color: #b33;
-  float: left;
-  width: 570px;
-}
-
-/* FOOTER HEADINGS */
-h5 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.25em;
-    margin-bottom: 20px;
+	float: left;
+	width: 570px;
+	color: brown;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2.5em;
 }
 
 header nav {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
 }
 
 a {
-  color: #f00;
-  text-decoration: none;
-  font-weight: bold;
+	color: red;
+	text-decoration: none;
+}
+
+a:visited {
+	color: tomato;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 main {
-    background: #fff;
-    border-radius: 0 5px 5px 5px;;
-    padding: 40px;
+	background: white;
+	overflow: auto;
+	padding: 20px;
 }
 
-.tabs a span {
-    border-radius: 5px 5px 0 0;
-    display: inline-block;
-    width: 100px;
-    margin-right: 10px;
-    text-align: center;
-    background: #ddd;
-    padding: 5px;
+main p {
+	max-width: 400px;
+	padding-bottom: 40px;
 }
 
-.tabs a .active {
-    background: #eee;
+.faq li {
+	font-weight: bold;
 }
 
-main .content {
-    padding: 30px 10px 30px 10px;
-    border-radius: 0 5px 5px 5px;
-    background: #eee;
+.faq p {
+	max-width: 500px;
 }
 
-main .content li {
-    border-radius: 5px;
-    padding: 3px;
-    background: #eff;
-    margin: 0 0 10px 0;
+h2 {
+	line-height: 250%;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 
-main .content button {
-  font-weight: bold;
-  padding: 0 3px 0 3px;
-  border-radius: 5px;
-  background: #ccc;
-  cursor: pointer;
-  margin-left: 5px;
-  font-size: 1.3em;
+h3 {
+	line-height: 225%;
+	font-size: 1.2em;
 }
 
-
-main .content p {
-    background: yellow;
+main .left {
+	float: left;
+	width: 570px;
 }
 
-main .content input {
-    font-size: 1.5em;
+main .right {
+	float: right;
+	width: 285px;
 }
 
-footer {
-    border-top: 1px solid #ddd;
-    padding: 40px 0 20px 0;
+h5 {
+	font-weight: bold;
+	padding-top: 45px;
+	padding-bottom: 20px;
 }
 
-footer .contact {
-  float: left;
-  width: 570px;    
+.amazerrific {
+	font-style: italic;
+	color: brown;
 }
 
-footer .contact p:nth-child(2) {
-  color: #b33;
-  font-style: italic;
+.contact {
+	float: left;
+	width: 570px;
+	line-height: 130%;
 }
 
-footer .sitemap {
-    float: right;
-    width: 285px;
+.sitemap {
+	float: right;
+	width: 285px;
+	color: red;
+	line-height: 130%;
 }
 
-footer ul {
-    width: 230px;
+.sitemap .left {
+	float: left;
 }
 
-li {
-    list-style: none;
-}
-
-footer .sitemap .left {
-    float: left;
-}
-
-footer .sitemap .right {
-    float: right;
+.sitemap .right {
+	float: right;
 }
