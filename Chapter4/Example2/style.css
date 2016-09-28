@@ -74,20 +74,28 @@ main {
   border-radius: 5px;
 }
 
-.comments p:nth-child(even) {
-  background: lavender;
-}
-
-.comments p:nth-child(odd) {
-  background: gainsboro;
-}
-
-#user1-output {
+.user1-output {
   color: black;
 }
 
-#user2-output {
+.user2-output {
   color: red;
+}
+
+.user1-output:nth-child(even) {
+  background: lavender;
+}
+
+.user1-output:nth-child(odd) {
+  background: gainsboro;
+}
+
+.user2-output:nth-child(even) {
+  background: lemonchiffon;
+}
+
+.user2-output:nth-child(odd) {
+  background: antiquewhite;
 }
 
 footer {

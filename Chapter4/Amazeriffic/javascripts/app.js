@@ -8,6 +8,10 @@ var main = function() {
 		false;
 	};
 
+	for (var i = 1; i < 4; i++) {
+
+	}
+
 	$(".tabs a:nth-child(1)").on("click", function() {
 		makeTabActive(1);
 		return false;

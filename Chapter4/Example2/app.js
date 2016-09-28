@@ -1,3 +1,5 @@
+/* jshint browser: true, jquery: true, camelcase: true, indent: 2, undef: true, quotmark: single, maxlen: 80, trailing: true, curly: true, eqeqeq: true, forin: true, immed: true, latedef: true, newcap: true, nonew: true, unused: true, strict: true */
+
 var main = function () {
     'use strict';
 
@@ -6,7 +8,7 @@ var main = function () {
         var inputText;
 
         if ($('.comment-input #' + userId + '-input').val() !== '') {
-            $newComment = $('<p id=\'' + userId + '-output\'>');
+            $newComment = $('<p class=\'' + userId + '-output\'>');
             inputText = $('.comment-input #' + userId + '-input').val();
             $newComment.text(inputText);
             $newComment.hide();
@@ -16,7 +18,7 @@ var main = function () {
         }
     };
 
-    $('.comment-input button').on('click', function (event) {
+    $('.comment-input button').on('click', function () {
         switch (this.id) {
             case 'user1-button':
                 addCommentFromInputBox('user1');
