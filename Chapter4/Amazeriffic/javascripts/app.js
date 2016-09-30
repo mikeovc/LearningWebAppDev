@@ -9,7 +9,7 @@ var main = function() {
 
     $(".tabs a span").toArray().forEach(function (element) {
         $(element).on("click", function () {
-            var $element = $(element), $content, i;
+            var $element = $(element), $content, $button, $input, i;
 
             $(".tabs span").removeClass("active");
             $element.addClass("active");
@@ -20,7 +20,6 @@ var main = function() {
                 for (i = toDos.length - 1; i >= 0; i--) {
                     $content.append($("<li>").text(toDos[i]));
                 }
-                $("main .content").append($content);
             } else if ($element.parent().is(":nth-child(2)")){
                 $content = $("<ul>");
                 toDos.forEach(function (toDo) {
@@ -28,8 +27,17 @@ var main = function() {
                 });
                 $("main .content").append($content);
             } else if ($element.parent().is(":nth-child(3)")) {
-                console.log('blah');
+                $button = $("<button>").text("+");
+                $input = $("<input>");
+
+                $button.on("click", function () {
+                    toDos.push($input.val());
+                    $input.val("");
+                });
+
+                $content = $("<div>").append($input, $button);
             }
+            $("main .content").append($content);
             return false;
         })
     });
