@@ -47,4 +47,4 @@ var main = function() {
 
 $(document).ready(main);
 
-//TODO: refactor amazerrific for add.class function
+//TODO: refactor amazerrific for addClass function
