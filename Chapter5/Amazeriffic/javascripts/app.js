@@ -25,6 +25,8 @@ var main = function (toDoObjects) {
                 });
                 $("main .content").append($content);
             } else if ($element.parent().is(":nth-child(3)")) {
+                
+            } else if ($element.parent().is(":nth-child(4)")) {
                 $button = $("<button>").text("+");
                 $input = $("<input>");
 
