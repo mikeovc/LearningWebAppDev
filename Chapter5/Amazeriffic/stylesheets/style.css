@@ -1,157 +1,155 @@
 body {
-  background: #f9e933;
-  font-family: 'Droid Sans', sans-serif;
+	background: #f9e933;
+	font-family: 'Tangerine', sans-serif;
+	font-size: 100%;
 }
 
 header, main, footer {
-  min-width: 855px;
+	min-width: 855px;
 }
 
-header .container, main .container, footer .container {
-  max-width: 855px;
-  margin: auto;
-}
-
-h2, h4, h6 {
-  font-family: 'Ubuntu', sans-serif;
+.container {
+	max-width: 855px;
+	margin: auto;
 }
 
 header {
-  padding: 25px 0 25px 0;
-  background: white;
-  overflow: auto;
-  border-bottom: 1px solid #ddd;
+	background: white;
+	overflow: auto;
+	padding: 25px;
+	padding-bottom: 35px;
+	border-bottom: 1px solid lightgrey;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-style: italic;
-  font-size: 3em;
-  color: #b33;
-  float: left;
-  width: 570px;
+	float: left;
+	width: 570px;
+	color: brown;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2.5em;
 }
 
 header nav {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
 }
 
 a {
-  color: #f00;
-  text-decoration: none;
-  font-weight: bold;
+	color: red;
+	text-decoration: none;
+}
+
+a:visited {
+	color: tomato;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 main {
-    background: #fff;
-    border-radius: 0 5px 5px 5px;;
-    padding: 40px;
+	background: white;
+	overflow: auto;
+	padding: 20px;
 }
 
-.tabs a span {
-    border-radius: 5px 5px 0 0;
-    display: inline-block;
-    width: 100px;
-    margin-right: 10px;
-    text-align: center;
-    background: #ddd;
-    padding: 5px;
+main p {
+	max-width: 400px;
 }
 
-.tabs a .active {
-    background: #eee;
+.tabs span {
+	display: inline-block;
+	border-radius: 5px 5px 0 0;
+	width: 100px;
+	margin-right: 10px;
+	text-align: center;
+	background: #ddd;
+	padding: 5px;
 }
 
-main .content {
-    padding: 30px 10px 30px 10px;
-    border-radius: 0 5px 5px 5px;
-    background: #eee;
+.tabs a span.active {
+	background: #eee;
+}
+
+.content {
+	background: #eee;
+	border-radius: 0px 5px 5px 5px;
+	padding: 30px 10px 30px 10px;
+}
+
+.content li {
+	border-radius: 5px;
+	background: aliceblue;
+	padding: 5px;
+	margin: 15px;
+}
+
+.content input {
+	margin-bottom: 10px;
+}
+
+.faq li {
+	font-weight: bold;
+}
+
+.faq p {
+	max-width: 500px;
+}
+
+h2 {
+	line-height: 250%;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 
 h3 {
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 5px;
-    color: #999;;
-    background: #ddd;
-    padding: 5px;
-    margin: 20px 0 10px 0;
+	line-height: 225%;
+	font-size: 1.2em;
 }
 
-h3:first-child {
-    margin-top: 0;
+main .left {
+	float: left;
+	width: 570px;
 }
 
-main .content li {
-    border-radius: 5px;
-    padding: 3px;
-    background: #eff;
-    margin: 0 0 10px 0;
-}
-
-main .content button {
-  font-weight: bold;
-  padding: 0 3px 0 3px;
-  border-radius: 5px;
-  background: #ccc;
-  cursor: pointer;
-  margin-left: 5px;
-  font-size: 1.3em;
-}
-
-main .content p {
-    color: red;
-    margin: 30px 0 0 0;
-}
-
-main .content p:first-child {
-    margin-top: 10px;
-}
-
-main .content input {
-    font-size: 1.5em;
-}
-
-
-
-footer {
-    border-top: 1px solid #ddd;
-    padding: 40px 0 20px 0;
-}
-
-footer .contact {
-  float: left;
-  width: 570px;    
+main .right {
+	float: right;
+	width: 285px;
 }
 
 h5 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.25em;
-    margin-bottom: 20px;
+	font-weight: bold;
+	padding-top: 45px;
+	padding-bottom: 20px;
 }
 
-footer .contact p:nth-child(2) {
-  color: #b33;
-  font-style: italic;
+.amazerrific {
+	font-style: italic;
+	color: brown;
 }
 
-footer .sitemap {
-    float: right;
-    width: 285px;
+.contact {
+	float: left;
+	width: 570px;
+	line-height: 130%;
 }
 
-footer ul {
-    width: 230px;
+.sitemap {
+	float: right;
+	width: 285px;
+	color: red;
+	line-height: 130%;
 }
 
-li {
-    list-style: none;
+.sitemap .left {
+	float: left;
 }
 
-footer .sitemap .left {
-    float: left;
-}
-
-footer .sitemap .right {
-    float: right;
+.sitemap .right {
+	float: right;
 }
