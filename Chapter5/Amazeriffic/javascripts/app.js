@@ -7,7 +7,7 @@ var main = function (toDoObjects) {
 
     $(".tabs a span").toArray().forEach(function (element) {
         $(element).on("click", function () {
-            var $element = $(element), $content, $button, $input, i;
+            var $element = $(element), $content, i;
 
             $(".tabs span").removeClass("active");
             $element.addClass("active");
@@ -65,15 +65,31 @@ var main = function (toDoObjects) {
                     $("main .content").append($content);
                 });
             } else if ($element.parent().is(":nth-child(4)")) {
-                $button = $("<button>").text("+");
-                $input = $("<input>");
+                var $input = $("<input>").addClass("description"),
+                    $inputLabel = $("<p>").text("Description: "),
+                    $tagInput = $("<input>").addClass("tags"),
+                    $tagLabel = $("<p>").text("Tags: "),
+                    $button = $("<button>").text("+");
 
                 $button.on("click", function () {
-                    toDos.push($input.val());
+                    var description = $input.val(),
+                        tags = $tagInput.val().split(",");
+
+                    toDoObjects.push({"description":description, "tags":tags});
+                    
+                    toDos = toDoObjects.map(function (toDo) {
+                        return toDo.description;
+                    });
+
                     $input.val("");
+                    $tagInput.val("");
                 });
 
-                $content = $("<div>").append($input, $button);
+                $content = $("<div>").append($inputLabel)
+                                     .append($input)
+                                     .append($tagLabel)
+                                     .append($tagInput)
+                                     .append($button);
             }
             $("main .content").append($content);
             return false;
