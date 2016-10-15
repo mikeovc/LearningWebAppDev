@@ -57,3 +57,15 @@ app.post("/all-even", function (req, res) {
 
     res.json({"answer":allEven});
 });
+
+app.post("/has-string", function (req, res) {
+    var containsString = false;
+
+    req.body.stringList.forEach(function (string) {
+        if (req.body.indexString == string) {
+            containsString = true;
+        }
+    });
+
+    res.json({"answer":containsString});
+});
