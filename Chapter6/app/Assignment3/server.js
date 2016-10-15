@@ -1,6 +1,7 @@
 var http = require("http"),
     express = require("express"),
-    bodyParser = require("body-parser"),
+    bodyParser = require("body-parser")
+    asg3 = require("./asg3.js"),
     app = express();
 
 app.use(express.static("./client"));
@@ -10,85 +11,44 @@ http.createServer(app).listen(3000);
 
 // Problem 1
 app.post("/average", function (req, res) {
-    var sum = 0, average;
-
-    req.body.numberList.forEach(function (number) {
-        sum = sum + parseFloat(number);
-    });
-
-    average = sum / req.body.numberList.length;
+    var average = asg3.findAverage(req.body.numberList);
 
     res.json({"answer":average});
 });
 
 // Problem 2
 app.post("/largest", function (req, res) {
-    var largest = parseFloat(req.body.numberList[0]);
-
-    req.body.numberList.forEach(function (number) {
-        if (parseFloat(number) >= largest) {
-            largest = number;
-        }
-    });
+    var largest = asg3.findLargest(req.body.numberList);
 
     res.json({"answer":largest});
 });
 
 // Problem 3
 app.post("/one-even", function (req, res) {
-    var hasEven = false;
-
-    req.body.numberList.forEach(function (number) {
-        if (parseInt(number) % 2 === 0) {
-            hasEven = true;
-            // break;
-        }
-    });
+    var hasEven = asg3.containsEven(req.body.numberList);
 
     res.json({"answer":hasEven});
 });
 
 // Problem 4
 app.post("/all-even", function (req, res) {
-    var allEven = true;
-
-    req.body.numberList.forEach(function (number) {
-        if (parseInt(number) % 2 !== 0) {
-            allEven = false;
-            // break;
-        }
-    });
+    var allEven = asg3.hasOnlyEven(req.body.numberList);
 
     res.json({"answer":allEven});
 });
 
 // Problem 5
 app.post("/has-string", function (req, res) {
-    var containsString = false;
-
-    req.body.stringList.forEach(function (string) {
-        if (req.body.indexString == string) {
-            containsString = true;
-        }
-    });
+    var containsString = asg3.hasString(req.body.stringList,
+                                        req.body.indexString);
 
     res.json({"answer":containsString});
 });
 
 // Problem 6
 app.post("/has-string-repeated", function (req, res) {
-    var occurances = 0;
+    var hasStringRepeated = asg3.hasStringAtLeastTwice(req.body.stringList,
+                                                       req.body.indexString);
 
-    req.body.stringList.forEach(function (string) {
-        if (req.body.indexString == string) {
-            occurances++;
-        }
-        // break ofter occurances = 2;
-    });
-
-    if (occurances >= 2) {
-        res.json({"answer":true});
-    } else {
-        res.json({"answer":false});
-    }
+    res.json({"answer":hasStringRepeated});
 });
