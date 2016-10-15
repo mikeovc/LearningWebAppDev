@@ -38,8 +38,22 @@ app.post("/one-even", function (req, res) {
     req.body.numberList.forEach(function (number) {
         if (parseInt(number) % 2 === 0) {
             hasEven = true;
+            // break;
         }
     });
 
     res.json({"answer":hasEven});
+});
+
+app.post("/all-even", function (req, res) {
+    var allEven = true;
+
+    req.body.numberList.forEach(function (number) {
+        if (parseInt(number) % 2 !== 0) {
+            allEven = false;
+            // break;
+        }
+    });
+
+    res.json({"answer":allEven});
 });
