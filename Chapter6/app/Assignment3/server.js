@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({"extended":"false"}));
 
 http.createServer(app).listen(3000);
 
+// Problem 1
 app.post("/average", function (req, res) {
     var sum = 0, average;
 
@@ -20,6 +21,7 @@ app.post("/average", function (req, res) {
     res.json({"answer":average});
 });
 
+// Problem 2
 app.post("/largest", function (req, res) {
     var largest = parseFloat(req.body.numberList[0]);
 
@@ -32,6 +34,7 @@ app.post("/largest", function (req, res) {
     res.json({"answer":largest});
 });
 
+// Problem 3
 app.post("/one-even", function (req, res) {
     var hasEven = false;
 
@@ -45,6 +48,7 @@ app.post("/one-even", function (req, res) {
     res.json({"answer":hasEven});
 });
 
+// Problem 4
 app.post("/all-even", function (req, res) {
     var allEven = true;
 
@@ -58,6 +62,7 @@ app.post("/all-even", function (req, res) {
     res.json({"answer":allEven});
 });
 
+// Problem 5
 app.post("/has-string", function (req, res) {
     var containsString = false;
 
@@ -68,4 +73,22 @@ app.post("/has-string", function (req, res) {
     });
 
     res.json({"answer":containsString});
+});
+
+// Problem 6
+app.post("/has-string-repeated", function (req, res) {
+    var occurances = 0;
+
+    req.body.stringList.forEach(function (string) {
+        if (req.body.indexString == string) {
+            occurances++;
+        }
+        // break ofter occurances = 2;
+    });
+
+    if (occurances >= 2) {
+        res.json({"answer":true});
+    } else {
+        res.json({"answer":false});
+    }
 });
