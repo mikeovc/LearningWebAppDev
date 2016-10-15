@@ -46,25 +46,25 @@ asg3.hasOnlyEven = function (numList) {
     });
 
     return allEven;
-}
+};
 
 asg3.hasString = function (stringList, indexString) {
     var containsString = false;
 
     stringList.forEach(function (string) {
-        if (indexString == string) {
+        if (indexString === string) {
             containsString = true;
         }
     });
 
     return containsString;
-}
+};
 
 asg3.hasStringAtLeastTwice = function (stringList, indexString) {
     var occurances = 0;
 
     stringList.forEach(function (string) {
-        if (indexString == string) {
+        if (indexString === string) {
             occurances++;
         }
         // break ofter occurances = 2;
@@ -75,6 +75,6 @@ asg3.hasStringAtLeastTwice = function (stringList, indexString) {
     } else {
         return false;
     }
-}
+};
 
 module.exports = asg3;
