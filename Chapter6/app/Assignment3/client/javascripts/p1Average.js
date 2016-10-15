@@ -7,7 +7,7 @@ var main = function () {
         console.log(numbers);   // remove this later
 
         $.post("/average", numbers, function (response) {
-            console.log(response.answer);
+            $(".output").val(response.answer);
         });
 
         $(".text").val("");

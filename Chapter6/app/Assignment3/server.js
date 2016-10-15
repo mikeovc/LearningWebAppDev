@@ -5,21 +5,19 @@ var http = require("http"),
     numbers = [];
 
 app.use(express.static("./client"));
-app.use(bodyParser.urlencoded({"extended":"true"}));
+app.use(bodyParser.urlencoded({"extended":"false"}));
 
 http.createServer(app).listen(3000);
 
 app.post("/average", function (req, res) {
-    numbers = req.body();
-    console.log(numbers);
-
     var sum = 0, average;
+    numbers = req.body.numberList;
 
     numbers.forEach(function (number) {
-        sum = sum + number;
+        sum = sum + parseFloat(number);
     });
 
-    average = numbers.length;
+    average = sum / numbers.length;
 
     res.json({"answer":average});
 });
